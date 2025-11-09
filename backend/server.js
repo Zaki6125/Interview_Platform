@@ -4,7 +4,7 @@ import path from "path";
 import { connectDB } from "./lib/db.js";
 import cors from 'cors'
 import {serve} from 'inngest/express'
-import { Functions, inngest } from "./lib/inngest.js";
+import { functions, inngest } from "./lib/inngest.js";
 const app = express();
 app.use(express.json())
 app.use(cors({
@@ -12,7 +12,7 @@ app.use(cors({
   credentials: true
 }));
 
- app.use('/api/inngest', serve({client: inngest, Functions}))
+ app.use('/api/inngest', serve({client: inngest, functions}))
 const __dirname = path.resolve();
 app.get("/healt", (req, res) => {
   res.status(200).json({
