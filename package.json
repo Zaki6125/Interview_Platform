@@ -6,7 +6,6 @@
   "scripts": {
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "npm run start --prefix backend"
-    
   },
   "repository": {
     "type": "git",
@@ -19,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Zaki6125/Interview_Platform/issues"
   },
-  "homepage": "https://github.com/Zaki6125/Interview_Platform#readme"
+  "homepage": "https://github.com/Zaki6125/Interview_Platform#readme",
+  "dependencies": {
+    "@clerk/clerk-react": "^5.53.8"
+  }
 }
