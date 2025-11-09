@@ -34,7 +34,7 @@
 
 import { Inngest } from 'inngest';
 import { connectDB } from './db.js';
-import { User } from '../models/User.js';
+import  User  from '../models/User.js';
 
 // 🔹 Inngest client
 export const inngest = new Inngest({ id: "talent-IQ" });

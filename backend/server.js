@@ -7,11 +7,12 @@ import serve from 'inngest/express'
 import { Functions, inngest } from "./lib/inngest.js";
 const app = express();
 app.use(express.json())
- app.use(cors({
+app.use(cors({
   origin: ENV.CLIENT_URL,
-  Credential: true
- }))
- app.use('api/inngest', serve({client: inngest, Functions}))
+  credentials: true
+}));
+
+ app.use('/api/inngest', serve({client: inngest, Functions}))
 const __dirname = path.resolve();
 app.get("/healt", (req, res) => {
   res.status(200).json({
