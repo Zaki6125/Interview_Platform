@@ -1,20 +1,24 @@
-import { SignedOut, SignIn, SignInButton, SignOutButton, UserButton } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, SignInButton, SignOutButton, UserButton } from "@clerk/clerk-react";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1>Welcome to the My 1st Project...</h1>
+      <h1>Welcome to My 1st Project...</h1>
+
       <SignedOut>
-        <SignInButton mode="model">
-          <button>click me</button>
+        {/* Ye tab chalega jab user logged out hoga */}
+        <SignInButton mode="modal">
+          <button>Click me to Sign In</button>
         </SignInButton>
       </SignedOut>
-      
-      <SignIn>
-        <SignOutButton/>
-      </SignIn>
-      <UserButton/>
+
+      <SignedIn>
+        {/* Ye tab chalega jab user logged in hoga */}
+        <h2>Welcome back!</h2>
+        <SignOutButton />
+        <UserButton />
+      </SignedIn>
     </>
   );
 }
