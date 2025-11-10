@@ -148,7 +148,7 @@ function HomePage() {
                  </div>
                  <h3 className="card-title">Easy Collaboration</h3>
                  <p className="text-base-content/70">
-                 Share your screen, discuss solutions, and learn from each other in real-time
+                 Share your screen, discuss solutions, and learn from each other in real-time 
                  </p>
                 </div>
              </div>
