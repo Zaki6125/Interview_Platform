@@ -68,7 +68,7 @@ function ProblemPage() {
   const easyProblemCount = problems.filter(p =>p.difficulty === "Easy").length; // ✅ renamed for clarity
   const mediumProblemCount = problems.filter(p =>p.difficulty === "Medium").length; // ✅ renamed for clarity
   const hardProblemCount = problems.filter(p =>p.difficulty === "Hard ").length; // ✅ renamed for clarity
-
+   
   return (
     <div className="min-h-screen bg-base-200">
       <Navbar />
